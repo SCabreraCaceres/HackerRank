@@ -22,16 +22,24 @@ public class HourglassTest {
     @Test
     void hourGlassSum() {
         List<List<Integer>> array = buildList();
-        assertEquals(10, hourglass.sumHourGlass(array));
+        assertEquals(-19, hourglass.sumHourGlass(array));
     }
 
     private List<List<Integer>> buildList() {
         List<List<Integer>> list1 = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
-            List<Integer> array2 = List.of(0, 1, 2, 0, 3);
-            list1.add(array2);
-        }
+        list1.add(List.of(0, -4, -6, 0, -7, -6));
+        list1.add(List.of(-1, -2, -6, -8, -3, -1));
+        list1.add(List.of(-8, -4, -2, -8, -8, -6));
+        list1.add(List.of(-3, -1, -2, -5, -7, -4));
+        list1.add(List.of(-3, -5, -3, -6, -6, -6));
+        list1.add(List.of(-3, -6, 0, -8, -6, -7));
+        // 0 -4 -6 0 -7 -6
+        //-1 -2 -6 -8 -3 -1
+        //-8 -4 -2 -8 -8 -6
+        //-3 -1 -2 -5 -7 -4
+        //-3 -5 -3 -6 -6 -6
+        //-3 -6 0 -8 -6 -7
         return list1;
     }
 
